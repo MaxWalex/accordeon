@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+p,h1 {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+body {
+    background-color: rgb(29, 29, 29);
+    color: #fff;
+}
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 50px;
+    display: block;
+}
+/* accordeon */
+.accordeon {
+    padding: 40px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    max-width: 590px;
+    margin: 100px auto 0 auto;
+}
+.accordeon_item h3 {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.accordeon_item h3::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.accordeon_item + .accordeon_item {
+    margin-top: 10px;
+}
+.accordeon_item p {
+    transition: 0.5s;
+    font-size: 0;
+}
+.accordeon_item.open p {
+    font-size: 16px;
+}
+.accordeon_item.open h3::after {
+    content: '-';
+}
+/* accordeon */
